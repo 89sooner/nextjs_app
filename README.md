@@ -29,3 +29,14 @@
 ## 추가 아이디어
 - 상태 관리를 위해 context나 recoil 등 다른 라이브러리 사용 가능
 - 데이터 영속화를 위해 로컬 스토리지 또는 백엔드 연동 고려
+
+## Docker로 실행하기
+1. 이미지를 빌드합니다.
+   ```bash
+   docker build -t nextjs-todo .
+   ```
+2. 컨테이너를 실행합니다.
+   ```bash
+   docker run -p 3000:3000 nextjs-todo
+   ```
+3. 브라우저에서 `http://localhost:3000`을 열어 앱을 확인합니다.
