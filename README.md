@@ -36,3 +36,19 @@
 ## 추가 아이디어
 - 상태 관리를 위해 context나 recoil 등 다른 라이브러리 사용 가능
 - 데이터 영속화를 위해 로컬 스토리지 또는 백엔드 연동 고려
+## 백엔드 연동 예시 (NestJS + PostgreSQL)
+`backend` 디렉터리에는 NestJS 기반의 간단한 API 서버가 포함되어 있습니다. TypeORM을 사용해 PostgreSQL과 연결하며 Todo 데이터를 영속 저장합니다.
+
+### 사용 방법
+1. 백엔드 폴더로 이동 후 의존성 설치
+   ```bash
+   cd backend
+   npm install
+   ```
+2. 개발 서버 실행
+   ```bash
+   npm run start:dev
+   ```
+3. 브라우저나 API 클라이언트에서 `http://localhost:4000/todos` 경로를 호출해 데이터를 주고 받을 수 있습니다.
+
+데이터베이스 접속 설정은 `backend/src/app.module.ts` 파일에서 확인할 수 있으며, 실제 배포 시에는 환경 변수로 분리해 사용하면 좋습니다.
