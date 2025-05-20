@@ -8,13 +8,10 @@
 - `npm run start` – 프로덕션 모드로 실행
 
 ## 디렉터리 구조
-- `app/` – Next.js 앱 라우팅을 담당하는 디렉터리
-  - `layout.tsx` – 기본 레이아웃 정의
-  - `page.tsx` – 메인 페이지로 Todo 리스트를 출력
-  - `globals.css` – 전역 스타일
-- `components/` – 재사용 가능한 컴포넌트 모음
-  - `TodoList.tsx` – Todo 리스트 로직 및 UI
-
+- `frontend/` – Next.js 프론트엔드
+  - `app/` – 라우팅을 담당
+  - `components/` – 재사용 컴포넌트 모음
+- `backend/` – NestJS 기반 API 서버
 ## 동작 방식
 1. 브라우저에서 `/` 경로로 접속하면 `app/page.tsx`가 렌더링되며, 여기서 `TodoList` 컴포넌트를 불러옵니다.
 2. `TodoList` 컴포넌트는 `useState`를 사용해 할 일 목록과 입력 값을 관리합니다.
@@ -23,8 +20,9 @@
 5. 현재 상태는 컴포넌트 내부에서만 관리되므로 새로고침 시 초기화됩니다.
 
 ## 시작하기
-1. 의존성 설치
+1. 프론트엔드 의존성 설치
    ```bash
+   cd frontend
    npm install
    ```
 2. 개발 서버 실행
@@ -32,7 +30,6 @@
    npm run dev
    ```
 3. 브라우저에서 `http://localhost:3000`으로 접속하여 확인
-
 ## 추가 아이디어
 - 상태 관리를 위해 context나 recoil 등 다른 라이브러리 사용 가능
 - 데이터 영속화를 위해 로컬 스토리지 또는 백엔드 연동 고려
